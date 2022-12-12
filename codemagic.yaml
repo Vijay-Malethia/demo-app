@@ -1,3 +1,13 @@
+ workflows:
+    android-workflow-id:
+        name: Android Sample Workflow
+        # .......    
+        # .......
+        # .......  
+    ios-workflow-id:
+        name: iOS Sample Workflow
+        # ......
+        
  scripts:
     - name: Set up local.properties
       script: | 
@@ -8,7 +18,7 @@
     - name: Build AAB with Flutter
       script: | 
         flutter build appbundle --release
-    artifacts:
+    - artifacts:
       - build/**/outputs/**/*.aab
       - build/**/outputs/**/mapping.txt
       - flutter_drive.log
